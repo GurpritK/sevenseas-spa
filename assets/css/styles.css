@@ -78,6 +78,39 @@
             font-family: inherit;
         }
 
+        /* About Page Sections Font Matching */
+        #who-we-are h2, #our-mission h2, #our-team h2 {
+            font-family: 'Handlee', cursive;
+        }
+
+        #who-we-are .lead, #our-mission .lead, #our-team .lead {
+            font-family: inherit;
+        }
+
+        /* Team Member Images - Responsive Square Headshots */
+        #our-team .card {
+            border: none !important;
+            background: transparent;
+        }
+
+        #our-team .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #our-team .card img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        #our-team .card-body {
+            padding: 1.5rem 0 0 0;
+            background: transparent;
+        }
+
         /* Responsive adjustments for navbar */
         @media (max-width: 991.98px) {
             .hero-section {
