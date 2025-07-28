@@ -87,6 +87,15 @@
             font-family: inherit;
         }
 
+        /* Services Page Sections Font Matching */
+        #yoga-classes h2, #nutritional-advice h2, #mental-health-support h2, #wellness-programs h2 {
+            font-family: 'Handlee', cursive;
+        }
+
+        #yoga-classes .lead, #nutritional-advice .lead, #mental-health-support .lead, #wellness-programs .lead {
+            font-family: inherit;
+        }
+
         /* Team Member Images - Responsive Square Headshots */
         #our-team .card {
             border: none !important;
