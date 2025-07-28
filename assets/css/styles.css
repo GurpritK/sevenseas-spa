@@ -1,0 +1,112 @@
+
+        .navbar-custom {
+            color: #3B2F2F;
+        }
+
+        .navbar-custom .nav-link {
+            color: #3B2F2F;
+        }
+
+        .navbar-custom .nav-link.active {
+            font-weight: bold;
+        }
+
+        /* Fixed Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Remove body padding for fixed navbar - not needed for sticky */
+        body {
+            padding-top: 0;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero.png') no-repeat center center;
+            background-size: cover;
+            color: #FFEBD4;
+            padding: 120px 0 100px 0; /* Extra top padding to account for fixed navbar */
+            margin-top: 0;
+        }
+
+        .hero-section h1 {
+            font-family: 'Handlee', cursive;
+        }
+
+        .btn {
+            color: #3B2F2F;
+        }
+
+        /* Service Cards Font Matching */
+        .card-title {
+            font-family: 'Handlee', bold;
+        }
+
+        .card-text {
+            font-family: inherit;
+        }
+
+        /* Services Section Heading Font Matching */
+        #services h2 {
+            font-family: 'Handlee', cursive;
+        }
+
+        #services .lead {
+            font-family: inherit;
+        }
+
+        /* Wellness Tips Section Font Matching */
+        #wellness-tips h2 {
+            font-family: 'Handlee', cursive;
+        }
+
+        #wellness-tips .lead {
+            font-family: inherit;
+        }
+
+        /* Testimonials Section Font Matching */
+        #testimonials h2 {
+            font-family: 'Handlee', cursive;
+        }
+
+        #testimonials .lead {
+            font-family: inherit;
+        }
+
+        /* Responsive adjustments for navbar */
+        @media (max-width: 991.98px) {
+            .hero-section {
+                padding: 80px 0 60px 0; /* Adjust hero padding for smaller screens */
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .hero-section {
+                padding: 60px 0 40px 0; /* Compact padding for mobile */
+            }
+        }
+
+        /* Footer Styling */
+        #footer {
+            margin-top: auto;
+            background-color: #6B4E3D !important; /* Light brown shade */
+        }
+
+        .social-links a {
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: #FFEBD4 !important;
+            transform: translateY(-2px);
+        }
+
+        .social-links a:hover i {
+            filter: drop-shadow(0 2px 4px rgba(255, 235, 212, 0.3));
+        }
