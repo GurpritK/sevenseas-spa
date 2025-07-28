@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
     <title>Seven Seas Spa</title>
     <style>
         .navbar-custom {
@@ -20,10 +22,104 @@
             font-weight: bold;
         }
 
+        /* Fixed Navbar */
         .navbar {
             position: sticky;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Remove body padding for fixed navbar - not needed for sticky */
+        body {
+            padding-top: 0;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/hero.png') no-repeat center center;
+            background-size: cover;
+            color: #FFEBD4;
+            padding: 120px 0 100px 0; /* Extra top padding to account for fixed navbar */
+            margin-top: 0;
+        }
+
+        .hero-section h1 {
+            font-family: 'Handlee', cursive;
+        }
+
+        .btn {
+            color: #3B2F2F;
+        }
+
+        /* Service Cards Font Matching */
+        .card-title {
+            font-family: 'Handlee', bold;
+        }
+
+        .card-text {
+            font-family: inherit;
+        }
+
+        /* Services Section Heading Font Matching */
+        #services h2 {
+            font-family: 'Handlee', cursive;
+        }
+
+        #services .lead {
+            font-family: inherit;
+        }
+
+        /* Wellness Tips Section Font Matching */
+        #wellness-tips h2 {
+            font-family: 'Handlee', cursive;
+        }
+
+        #wellness-tips .lead {
+            font-family: inherit;
+        }
+
+        /* Testimonials Section Font Matching */
+        #testimonials h2 {
+            font-family: 'Handlee', cursive;
+        }
+
+        #testimonials .lead {
+            font-family: inherit;
+        }
+
+        /* Responsive adjustments for navbar */
+        @media (max-width: 991.98px) {
+            .hero-section {
+                padding: 80px 0 60px 0; /* Adjust hero padding for smaller screens */
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .hero-section {
+                padding: 60px 0 40px 0; /* Compact padding for mobile */
+            }
+        }
+
+        /* Footer Styling */
+        #footer {
+            margin-top: auto;
+            background-color: #6B4E3D !important; /* Light brown shade */
+        }
+
+        .social-links a {
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: #FFEBD4 !important;
+            transform: translateY(-2px);
+        }
+
+        .social-links a:hover i {
+            filter: drop-shadow(0 2px 4px rgba(255, 235, 212, 0.3));
         }
     </style>
 </head>
@@ -31,7 +127,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-custom">
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/images/logo.png" alt="Logo" width="30" height="30">
                 Seven Seas Spa
@@ -58,6 +154,240 @@
             </div>
         </div>
     </nav>
+
+    <main style="margin: 0 0 2rem 0;">
+        <div class="container-fluid hero-section text-center">
+            <h1 class="display-4">Welcome to Seven Seas Spa</h1>
+            <p class="lead">We are dedicated to improving your overall wellbeing.</p>
+            <a href="#" class="btn btn-light btn-lg">Contact Us</a>
+        </div>
+
+        <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Our Services</h2>
+                    <p class="lead text-muted">Discover our range of luxurious spa treatments designed to rejuvenate your mind, body, and soul</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Service Card 1 -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="assets/images/services/yoga.png" class="card-img-top" alt="Yoga Classes" style="height: 250px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Yoga Classes</h5>
+                            <p class="card-text flex-grow-1">Join our expert-led yoga classes designed to improve flexibility, strength, and mindfulness. Perfect for all skill levels, from beginners to advanced practitioners.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="assets/images/services/nutrition.png" class="card-img-top" alt="Nutritional Advice" style="height: 250px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Nutritional Advice</h5>
+                            <p class="card-text flex-grow-1">Get personalized nutrition guidance from our certified nutritionists. Learn healthy eating habits and meal planning to support your wellness journey.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="assets/images/services/mental_health.png" class="card-img-top" alt="Mental Health Support" style="height: 250px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Mental Health Support</h5>
+                            <p class="card-text flex-grow-1">Access professional mental health counseling and therapy services. We provide a safe, supportive environment for emotional wellbeing and personal growth.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="assets/images/services/wellness.png" class="card-img-top" alt="Wellness Programs" style="height: 250px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Wellness Programs</h5>
+                            <p class="card-text flex-grow-1">Comprehensive wellness experiences combining multiple treatments for the ultimate spa day. Perfect for special occasions or self-care.</p>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </section>
+
+    <!-- Wellness Tips Section -->
+    <section id="wellness-tips" class="py-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Wellness Tips</h2>
+                    <p class="lead text-muted">Simple daily practices to enhance your wellbeing and maintain a healthy lifestyle</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <ul class="list-unstyled">
+                        <li class="mb-4 d-flex align-items-start">
+                            <i class="fas fa-leaf text-success me-3 mt-1" style="font-size: 1.2rem;"></i>
+                            <div>
+                                <h5 class="fw-bold mb-2">Stay Hydrated Throughout the Day</h5>
+                                <p class="text-muted mb-0">Drink at least 8 glasses of water daily to keep your body hydrated, improve skin health, and boost energy levels. Add lemon or cucumber for extra flavor and benefits.</p>
+                            </div>
+                        </li>
+                        <li class="mb-4 d-flex align-items-start">
+                            <i class="fas fa-moon text-primary me-3 mt-1" style="font-size: 1.2rem;"></i>
+                            <div>
+                                <h5 class="fw-bold mb-2">Prioritize Quality Sleep</h5>
+                                <p class="text-muted mb-0">Aim for 7-9 hours of quality sleep each night. Create a relaxing bedtime routine and keep your bedroom cool, dark, and quiet for optimal rest and recovery.</p>
+                            </div>
+                        </li>
+                        <li class="mb-4 d-flex align-items-start">
+                            <i class="fas fa-heart text-danger me-3 mt-1" style="font-size: 1.2rem;"></i>
+                            <div>
+                                <h5 class="fw-bold mb-2">Practice Mindful Breathing</h5>
+                                <p class="text-muted mb-0">Take 5-10 minutes daily for deep breathing exercises. This simple practice can reduce stress, lower blood pressure, and improve mental clarity.</p>
+                            </div>
+                        </li>
+                        <li class="mb-4 d-flex align-items-start">
+                            <i class="fas fa-walking text-warning me-3 mt-1" style="font-size: 1.2rem;"></i>
+                            <div>
+                                <h5 class="fw-bold mb-2">Move Your Body Daily</h5>
+                                <p class="text-muted mb-0">Incorporate at least 30 minutes of physical activity into your daily routine. Whether it's walking, yoga, or dancing, regular movement boosts mood and energy.</p>
+                            </div>
+                        </li>
+                        <li class="mb-4 d-flex align-items-start">
+                            <i class="fas fa-apple-alt text-info me-3 mt-1" style="font-size: 1.2rem;"></i>
+                            <div>
+                                <h5 class="fw-bold mb-2">Nourish with Whole Foods</h5>
+                                <p class="text-muted mb-0">Focus on eating colorful fruits, vegetables, whole grains, and lean proteins. Limit processed foods and sugar to maintain stable energy and support overall health.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">What Our Clients Say</h2>
+                    <p class="lead text-muted">Hear from our valued clients about their transformative experiences at Seven Seas Spa</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="card-body d-flex flex-column">
+                            <img src="assets/images/headshots/emily_johnson.png" alt="Emily Johnson" class="rounded-circle mx-auto mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <blockquote class="blockquote flex-grow-1">
+                                <p class="mb-3">"The massage therapy at Seven Seas Spa was absolutely incredible! I felt completely relaxed and rejuvenated. The therapists are so skilled and the atmosphere is pure tranquility. I can't wait to come back!"</p>
+                            </blockquote>
+                            <footer class="blockquote-footer mt-auto">
+                                <strong>Emily Johnson</strong>
+                                <br>
+                                <small class="text-muted">Regular Client</small>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="card-body d-flex flex-column">
+                            <img src="assets/images/headshots/jane_smith.png" alt="Jane Smith" class="rounded-circle mx-auto mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <blockquote class="blockquote flex-grow-1">
+                                <p class="mb-3">"My facial treatment exceeded all expectations! My skin has never looked better. The staff is incredibly professional and the spa environment is so peaceful. This is definitely my new go-to wellness destination."</p>
+                            </blockquote>
+                            <footer class="blockquote-footer mt-auto">
+                                <strong>Jane Smith</strong>
+                                <br>
+                                <small class="text-muted">Wellness Enthusiast</small>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="card-body d-flex flex-column">
+                            <img src="assets/images/headshots/john_doe.png" alt="John Doe" class="rounded-circle mx-auto mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <blockquote class="blockquote flex-grow-1">
+                                <p class="mb-3">"The couples retreat package was perfect for our anniversary! My wife and I had an amazing day of relaxation together. The attention to detail and personalized service made it truly special. Highly recommended!"</p>
+                            </blockquote>
+                            <footer class="blockquote-footer mt-auto">
+                                <strong>John Doe</strong>
+                                <br>
+                                <small class="text-muted">Anniversary Celebrant</small>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2025 Seven Seas Spa. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" class="text-white me-3" aria-label="Facebook">
+                            <i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="https://x.com" target="_blank" class="text-white me-3" aria-label="X (Twitter)">
+                            <i class="fab fa-x-twitter" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-white me-3" aria-label="Instagram">
+                            <i class="fab fa-instagram" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-white" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://fonts.googleapis.com/css2?family=Handle&display=swap"></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
